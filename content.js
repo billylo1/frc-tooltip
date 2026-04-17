@@ -2,14 +2,17 @@ let frcTeams = {};
 let tooltip = null;
 let currentWord = "";
 
-// Load team data
-fetch(chrome.runtime.getURL('teams.json'))
-  .then(response => response.json())
-  .then(data => {
-    frcTeams = data;
-    init();
-  })
-  .catch(err => console.error('Error loading FRC teams:', err));
+if (!window.frcTooltipLoaded) {
+  window.frcTooltipLoaded = true;
+  // Load team data
+  fetch(chrome.runtime.getURL('teams.json'))
+    .then(response => response.json())
+    .then(data => {
+      frcTeams = data;
+      init();
+    })
+    .catch(err => console.error('Error loading FRC teams:', err));
+}
 
 function init() {
   createTooltip();

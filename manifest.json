@@ -1,23 +1,38 @@
 {
   "manifest_version": 3,
-  "name": "FRC Team Lookup",
+  "name": "FRC Tooltip",
   "version": "1.0",
   "description": "Shows FRC team names when hovering over team numbers.",
-  "permissions": ["storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
     }
   ],
   "action": {
-    "default_title": "FRC Team Lookup"
+    "default_title": "FRC Tooltip"
   },
   "web_accessible_resources": [
     {
-      "resources": ["teams.json"],
-      "matches": ["<all_urls>"]
+      "resources": [
+        "teams.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
     }
   ]
 }
