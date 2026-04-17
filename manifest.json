@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "FRC Team Lookup",
+  "version": "1.0",
+  "description": "Shows FRC team names when hovering over team numbers.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_title": "FRC Team Lookup"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["teams.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
