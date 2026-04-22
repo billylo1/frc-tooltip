@@ -2,6 +2,10 @@
 
 This extension shows the FRC team name as a tooltip when you hover over a team number (1-5 digits) on any webpage.
 
+## Install from Chrome Web Store
+
+Install **[FRC Tooltip](https://chromewebstore.google.com/detail/ljdhalanolcfbaeffkcoaelhjanihnia?authuser=0&hl=en-US)** from the Chrome Web Store.
+
 ## Installation for Development
 
 1. Open Chrome and navigate to `chrome://extensions/`.
